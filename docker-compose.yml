@@ -10,9 +10,11 @@ services:
     #   - MONGO_URI=mongodb://localhost:27017/react_express_ecommerce
     depends_on:
       - frontend
+    restart: always
 
   frontend:
     build:
       context: ./frontend
     ports:
       - "3002:80"
+    restart: always
